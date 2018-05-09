@@ -184,4 +184,4 @@ the fifth image
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. The visual output of your trained network's feature maps. 
 
-
+<img src="examples/filter_visualize.png" width="800" />
