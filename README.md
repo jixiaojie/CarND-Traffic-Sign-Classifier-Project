@@ -43,7 +43,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the distribution of classes in the training validation and test set
 
-![alt text]['./example/data_distribution.png']
+<img src="examples/data_distribution.png" width="480" alt="step07_region_of_interest_img" />
 
 ### Design and Test a Model Architecture
 
