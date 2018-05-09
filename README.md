@@ -97,20 +97,19 @@ My final model results were:
   
 ### Test a Model on New Images
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
-
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
-
+#### 1. Here are five German traffic signs that I found on the web:
+ 
 <div class="test">
-<img src="examples/01_4.jpg" width="50" />
-<img src="examples/02_35.jpg" width="50" />
+<img src="examples/01_4.jpg" width="200" />
+<img src="examples/02_35.jpg" width="200" />
+<img src="examples/03_14.jpg" width="200" />
+<img src="examples/03_14.jpg" width="200" />
+<img src="examples/03_14.jpg" width="200" />
 </div>
  
 
-The first image might be difficult to classify because ...
+The first image might be difficult to classify because is blurring very much
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -118,31 +117,69 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Speed limit (70km/h)      		| Speed limit (30km/h)   									| 
+| Ahead only    			| Ahead only 										|
+| Stop				| Stop										|
+| No entry	      		| No entry					 				|
+| General caution			| General caution     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%.
 
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. 
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+ 
+the first image 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 1.0000000e+00        			| Speed limit (30km/h)   									| 
+| 1.8295877e-17    				| Speed limit (50km/h) 										|
+| 1.0979316e-18					| End of speed limit (80km/h)											|
+| 1.8316109e-19	      			| End of all speed and passing limits				 				|
+| 1.6350016e-19				    | Speed limit (70km/h)      							|
 
 
-For the second image ... 
+the second image 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0000000e+00        			| Ahead only   									| 
+| 2.6248301e-21    				| Turn right ahead 										|
+| 4.0649192e-29					| No passing for vehicles over 3.5 metric tons											|
+| 8.7500534e-30      			| No passing					 				|
+| 1.8728784e-36			    | Dangerous curve to the right     							|
+
+the third image 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0000000e+00        			| Stop   									| 
+| 7.5018215e-27   				| Speed limit (60km/h)										|
+| 1.1705554e-30					| End of all speed and passing limits										|
+| 7.5181316e-32	      			| No passing					 				|
+| 9.7413988e-33				    | Dangerous curve to the right      							|
+
+the fourth image 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0000000e+00        			| No entry   									| 
+| 1.2745330e-31    				| Ahead only										|
+| 2.9320675e-35					| Dangerous curve to the left									|
+| 15.3670562e-36	      			| End of all speed and passing limits				 				|
+| 3.2828654e-38			    | Speed limit (20km/h)     							|
+
+the fifth image 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0000000e+00        			| General caution   									| 
+| 0.0000000e+00    				| Speed limit (20km/h)										|
+| 0.0000000e+00					| Speed limit (30km/h)										|
+| 0.0000000e+00	      			| Speed limit (50km/h)					 				|
+| 0.0000000e+00				    | Speed limit (60km/h)     							|
+
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
