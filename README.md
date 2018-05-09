@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 ### README
 
 ### Data Set Summary & Exploration
-<br />
+
 #### 1. I used the np.array.shpape to calculate summary statistics of the traffic
 signs data set:
 
@@ -27,12 +27,12 @@ signs data set:
 * The shape of a traffic sign image is [32, 32, 3]
 * The number of unique classes/labels in the data set is 43
 
-
+echo "<br />"
 #### 2. Here is an exploratory visualization of the data set. It is a bar chart showing how the distribution of classes in the training validation and test set
 
 <img src="examples/data_distribution.png" width="800" />
 
-
+echo "<br />"
 ### Design and Test a Model Architecture
 
 #### 1. As a first step, I decided to convert the images to grayscale because gray image can improve the accuracy
@@ -40,7 +40,8 @@ signs data set:
 Here is an example of a traffic sign image before and after grayscaling.
 
 <img src="examples/gray_image.png" width="480" />
-<br />
+
+echo "<br />"
 #### 2. As a last step, I normalized the image data because it can prevent overfitting
 ```python
 
@@ -50,7 +51,7 @@ for i in range(len(X_train)):
     
 ```
 
-<br />
+echo "<br />"
 #### 3. Model Architecture
 
 My final model consisted of the following layers:
@@ -77,22 +78,23 @@ My final model consisted of the following layers:
 | Output         		|  Output = 1 							| 
 
 
-<br />
+echo "<br />"
 #### 4. Parameters
 
 **type of optimizer** : tf.train.AdamOptimizer
 **batch size** : 64
 **number of epochs** : 20
 **learning rate** :  0.001
-<br />
+
+echo "<br />"
 #### 5. Accuracy approaching 
 
 My final model results were:
 * training set accuracy of 0.997
 * validation set accuracy of 0.966 
 * test set accuracy of 0.957
-<br />
 
+echo "<br />"
 ### Test a Model on New Images
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
