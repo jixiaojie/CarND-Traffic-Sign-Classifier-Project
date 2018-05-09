@@ -104,8 +104,8 @@ My final model results were:
 <img src="examples/01_4.jpg" width="200" />
 <img src="examples/02_35.jpg" width="200" />
 <img src="examples/03_14.jpg" width="200" />
-<img src="examples/03_14.jpg" width="200" />
-<img src="examples/03_14.jpg" width="200" />
+<img src="examples/04_17.jpg" width="200" />
+<img src="examples/05_18.jpg" width="200" />
 </div>
  
 
@@ -182,6 +182,6 @@ the fifth image
 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+#### 1. The visual output of your trained network's feature maps. 
 
 
