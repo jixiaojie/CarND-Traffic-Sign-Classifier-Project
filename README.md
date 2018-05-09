@@ -105,8 +105,8 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image7] ![alt text][image8]
 
 <div class="test">
-<img src="examples/01_4.jpg" width="480" />
-<img src="examples/02_35.jpg" width="480" />
+<img src="examples/01_4.jpg" width="50" />
+<img src="examples/02_35.jpg" width="50" />
 </div>
  
 
