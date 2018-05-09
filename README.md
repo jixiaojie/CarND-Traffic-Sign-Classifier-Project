@@ -25,9 +25,6 @@ The goals / steps of this project are the following:
 [image7]: ./examples/04_17.jpg "No entry"
 [image8]: ./examples/05_18.jpg "General caution"
 
-## Rubric Points
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
-
 ---
 ### Writeup / README
 
