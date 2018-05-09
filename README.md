@@ -81,7 +81,7 @@ My final model consisted of the following layers:
 
 #### 4. Parameters
 
-* type of optimizer: tf.train.AdamOptimizer
+* type of optimizer : tf.train.AdamOptimizer
 * batch size : 64
 * number of epochs : 20
 * learning rate :  0.001
