@@ -27,12 +27,12 @@ signs data set:
 * The shape of a traffic sign image is [32, 32, 3]
 * The number of unique classes/labels in the data set is 43
 
-\<br>  
+<br>  
 #### 2. Here is an exploratory visualization of the data set. It is a bar chart showing how the distribution of classes in the training validation and test set
 
 <img src="examples/data_distribution.png" width="800" />
 
-\<br>  
+<br>  
 ### Design and Test a Model Architecture
 
 #### 1. As a first step, I decided to convert the images to grayscale because gray image can improve the accuracy
@@ -41,7 +41,7 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 <img src="examples/gray_image.png" width="480" />
 
-\<br>  
+<br>  
 #### 2. As a last step, I normalized the image data because it can prevent overfitting
 ```python
 
@@ -51,7 +51,7 @@ for i in range(len(X_train)):
     
 ```
 
-\<br>  
+<br>  
 #### 3. Model Architecture
 
 My final model consisted of the following layers:
@@ -78,7 +78,7 @@ My final model consisted of the following layers:
 | Output         		|  Output = 1 							| 
 
 
-\<br>  
+<br>  
 #### 4. Parameters
 
 **type of optimizer** : tf.train.AdamOptimizer
@@ -86,7 +86,7 @@ My final model consisted of the following layers:
 **number of epochs** : 20
 **learning rate** :  0.001
 
-\<br>  
+<br>  
 #### 5. Accuracy approaching 
 
 My final model results were:
@@ -94,7 +94,7 @@ My final model results were:
 * validation set accuracy of 0.966 
 * test set accuracy of 0.957
 
-\<br>  
+<br>  
 ### Test a Model on New Images
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
