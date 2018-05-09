@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 ### README
 
 ### Data Set Summary & Exploration
-
+<br />
 #### 1. I used the np.array.shpape to calculate summary statistics of the traffic
 signs data set:
 
@@ -40,7 +40,7 @@ signs data set:
 Here is an example of a traffic sign image before and after grayscaling.
 
 <img src="examples/gray_image.png" width="480" />
-
+<br />
 #### 2. As a last step, I normalized the image data because it can prevent overfitting
 ```python
 
@@ -50,7 +50,7 @@ for i in range(len(X_train)):
     
 ```
 
-
+<br />
 #### 3. Model Architecture
 
 My final model consisted of the following layers:
@@ -77,21 +77,21 @@ My final model consisted of the following layers:
 | Output         		|  Output = 1 							| 
 
 
-
-#### 3. Parameters
+<br />
+#### 4. Parameters
 
 **type of optimizer** : tf.train.AdamOptimizer
 **batch size** : 64
 **number of epochs** : 20
 **learning rate** :  0.001
-
-#### 4. Accuracy approaching 
+<br />
+#### 5. Accuracy approaching 
 
 My final model results were:
 * training set accuracy of 0.997
 * validation set accuracy of 0.966 
 * test set accuracy of 0.957
-
+<br />
 
 ### Test a Model on New Images
 
