@@ -81,10 +81,10 @@ My final model consisted of the following layers:
 
 #### 4. Parameters
 
-**type of optimizer** : tf.train.AdamOptimizer
-**batch size** : 64
-**number of epochs** : 20
-**learning rate** :  0.001
+* type of optimizer: tf.train.AdamOptimizer
+* batch size : 64
+* number of epochs : 20
+* learning rate :  0.001
 
   
 #### 5. Accuracy approaching 
@@ -104,7 +104,11 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-<img src="examples/01_4.jpg" width="480" /><img src="examples/02_35.jpg" width="480" />
+<div class="test">
+<img src="examples/01_4.jpg" width="480" />
+<img src="examples/02_35.jpg" width="480" />
+</div>
+ 
 
 The first image might be difficult to classify because ...
 
