@@ -13,24 +13,12 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-[//]: # (Image References)
-
-
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/01_4.jpg "Speed limit (70km/h)"
-[image5]: ./examples/02_35.jpg "Ahead only"
-[image6]: ./examples/03_14.jpg "Stop"
-[image7]: ./examples/04_17.jpg "No entry"
-[image8]: ./examples/05_18.jpg "General caution"
-
 ---
 ### README
 
 ### Data Set Summary & Exploration
 
-####1. I used the np.array.shpape to calculate summary statistics of the traffic
+#### 1. I used the np.array.shpape to calculate summary statistics of the traffic
 signs data set:
 
 * The size of training set is 34799
@@ -40,36 +28,30 @@ signs data set:
 * The number of unique classes/labels in the data set is 43
 
 
-####2. Here is an exploratory visualization of the data set. It is a bar chart showing how the distribution of classes in the training validation and test set
+#### 2. Here is an exploratory visualization of the data set. It is a bar chart showing how the distribution of classes in the training validation and test set
 
-<img src="examples/data_distribution.png" width="800" alt="step07_region_of_interest_img" />
+<img src="examples/data_distribution.png" width="800" />
 
 
 ### Design and Test a Model Architecture
 
-####1. As a first step, I decided to convert the images to grayscale because gray image can improve the accuracy
+#### 1. As a first step, I decided to convert the images to grayscale because gray image can improve the accuracy
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+<img src="examples/gray_image.png" width="480" />
 
-As a last step, I normalized the image data because ...
+#### 2. As a last step, I normalized the image data because it can prevent overfitting
+```python
 
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
+X_train_gray = np.zeros((X_train.shape[0], X_train.shape[1], X_train.shape[2], 1))
+for i in range(len(X_train)):
+    X_train_gray[i] = (((cv2.cvtColor(X_train[i],cv2.COLOR_RGB2GRAY)).astype(np.int16) - 128) / 128).reshape([32,32,1]) 
+    
+```
 
 
-#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
-
-
-
+#### 3. Model Architecture
 
 My final model consisted of the following layers:
 
@@ -96,34 +78,20 @@ My final model consisted of the following layers:
 
 
 
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Parameters
 
-To train the model, I used an ....
+**type of optimizer** : tf.train.AdamOptimizer
+**batch size** : 64
+**number of epochs** : 20
+**learning rate** :  0.001
 
-type of optimizer : tf.train.AdamOptimizer
-batch size : 64
-number of epochs : 20
-learning rate :  0.001
-
-#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. Accuracy approaching 
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 0.997
+* validation set accuracy of 0.966 
+* test set accuracy of 0.957
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
 
 ### Test a Model on New Images
 
@@ -133,6 +101,8 @@ Here are five German traffic signs that I found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
+
+<img src="examples/01_4.jpg" width="480" /><img src="examples/02_35.jpg" width="480" />
 
 The first image might be difficult to classify because ...
 
