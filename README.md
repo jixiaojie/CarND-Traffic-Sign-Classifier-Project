@@ -90,9 +90,9 @@ My final model consisted of the following layers:
 #### 5. Accuracy approaching 
 
 My final model results were:
-* training set accuracy of 0.997
-* validation set accuracy of 0.966 
-* test set accuracy of 0.957
+* training set accuracy of 0.999
+* validation set accuracy of 0.972 
+* test set accuracy of 0.958
 
   
 ### Test a Model on New Images
